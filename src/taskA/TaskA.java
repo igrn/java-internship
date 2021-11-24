@@ -1,14 +1,15 @@
-package task1;
+package taskA;
 
-import task1.car.Car;
-import task1.factory.BMWFactory;
-import task1.factory.MercedesFactory;
+import taskA.car.Car;
+import taskA.factory.BMWFactory;
+import taskA.factory.MercedesFactory;
 
-public class Task1 {
-    BMWFactory bmwFactory = new BMWFactory();
-    MercedesFactory mercedesFactory = new MercedesFactory();
+public class TaskA {
 
-    public void execute() {
+    public static void main(String[] args) {
+        BMWFactory bmwFactory = new BMWFactory();
+        MercedesFactory mercedesFactory = new MercedesFactory();
+
         //Создаем объекты классов "БМВ" и "Мерседес"
         Car carBMW = bmwFactory.build("BMW X5");
         Car carMercedes = mercedesFactory.build("Mercedes E350");

@@ -1,6 +1,6 @@
-package task1.factory;
+package taskA.factory;
 
-import task1.car.Car;
+import taskA.car.Car;
 
 public abstract class CarFactory {
 

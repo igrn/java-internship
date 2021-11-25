@@ -1,4 +1,4 @@
-package taskA.car;
+package car;
 
 public class Mercedes extends Car {
 

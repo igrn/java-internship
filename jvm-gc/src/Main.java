@@ -1,10 +1,8 @@
-package taskA;
+import car.Car;
+import factory.BMWFactory;
+import factory.MercedesFactory;
 
-import taskA.car.Car;
-import taskA.factory.BMWFactory;
-import taskA.factory.MercedesFactory;
-
-public class TaskA {
+public class Main {
 
     public static void main(String[] args) {
         BMWFactory bmwFactory = new BMWFactory();

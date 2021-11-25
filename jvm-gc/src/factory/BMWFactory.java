@@ -1,6 +1,6 @@
-package taskA.factory;
+package factory;
 
-import taskA.car.BMW;
+import car.BMW;
 
 public class BMWFactory extends CarFactory {
 

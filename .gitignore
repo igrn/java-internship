@@ -7,4 +7,5 @@ gradlew.bat
 
 # Intellij IDEA files
 .idea/
+out/
 *.iml

@@ -5,11 +5,10 @@ import java.util.Locale;
 public class Main {
 
     public static void main(String[] args) {
-        LocalDateTime localDateTime = LocalDateTime.of(2021, Month.AUGUST, 10, 8, 0);
-        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDateTime, ZoneId.of("UTC+4"));
+        ZonedDateTime zonedDateTime = getZonedDateTime(2021, Month.AUGUST, 10, 8, 0, ZoneId.of("UTC"));
         System.out.println("Текущие дата/время по Ульяновску: " + zonedDateTime);
 
-        boolean is16thDay = zonedDateTime.getDayOfMonth() >= 16 && zonedDateTime.getHour() >= 8;
+        boolean is16thDay = zonedDateTime.getDayOfMonth() >= 16 && zonedDateTime.getHour() >= 4;
         int delta = is16thDay ? 0 : 1;
 
         System.out.println("Предыдущие месяца:");
@@ -18,5 +17,11 @@ public class Main {
             System.out.println(date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH)
                     + " " + date.getYear());
         }
+    }
+
+    private static ZonedDateTime getZonedDateTime(int year, Month month, int day,
+                                                  int hour, int minute, ZoneId timezone) {
+        LocalDateTime localDateTime = LocalDateTime.of(year, month, day, hour, minute);
+        return ZonedDateTime.of(localDateTime, timezone);
     }
 }
